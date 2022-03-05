@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="text-center text-black-50 display-4">Mes Articles</h1><hr/>
+
+
+    <div *ngIf="products && products.length > 0">
+
+        <table class="table table-primary">
+            
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Description</th>
+                    <th>Coût</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let p of products">
+                    <td> {{ p.title }} </td>
+                    <td> {{ p.description }} </td>
+                    <td> {{ p.cost_production }} </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
